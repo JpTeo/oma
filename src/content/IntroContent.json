@@ -1,0 +1,13 @@
+{
+  "title": "Teo Coop",
+  "text": "Cooperativa de desarrollo de software comprometida con la innovación y el trabajo colaborativo. Creamos soluciones digitales a medida.",
+  "button": [
+    {
+      "title": "Explore"
+    },
+    {
+      "title": "Learn more",
+      "color": "#fff"
+    }
+  ]
+}
