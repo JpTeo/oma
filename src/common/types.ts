@@ -20,7 +20,6 @@ export interface SvgIconProps {
 export interface InputProps {
   name: string;
   placeholder: string;
-  t: TFunction;
   type?: string;
   value?: string;
   onChange: (
