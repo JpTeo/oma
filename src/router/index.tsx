@@ -1,3 +1,4 @@
+import React from "react";
 import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 import Footer from "../components/Footer";
