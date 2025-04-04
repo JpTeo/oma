@@ -1,12 +1,12 @@
 {
-  "title": "Teo Coop",
-  "text": "Cooperativa de desarrollo de software comprometida con la innovación y el trabajo colaborativo. Creamos soluciones digitales a medida.",
+  "title": "OMA Yoga y Pilates",
+  "text": "Conectá con tu cuerpo y tu mente en un espacio diseñado para tu bienestar",
   "button": [
     {
-      "title": "Explore"
+      "title": "Horairos"
     },
     {
-      "title": "Learn more",
+      "title": "Clase de prueba",
       "color": "#fff"
     }
   ]

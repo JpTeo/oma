@@ -37,7 +37,7 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Inicio")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Tecnologias")}</Span>
+          <Span>{t("Turnos")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("product")}>
           <Span>{t("Nosotros")}</Span>
@@ -59,7 +59,7 @@ const Header = ({ t }: { t: TFunction }) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logoteo2.png" width="140px" height="140px" />
+            <SvgIcon src="logooma5.png" width="70px" height="70px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />
