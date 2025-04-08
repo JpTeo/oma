@@ -3,24 +3,22 @@ import { createGlobalStyle } from "styled-components";
 export const Styles = createGlobalStyle`
 
     @font-face {
-        font-family: "Motiva Sans Light";
-        src: url("/fonts/Motiva-Sans-Light.ttf") format("truetype");
+        font-family: "Comme Light";
+        src: url("/fonts/Comme-Light.ttf") format("truetype");
         font-style: normal;
     }
 
     @font-face {
-        font-family: "Motiva Sans Bold";
-        src: url("/fonts/Motiva-Sans-Bold.ttf") format("truetype");
+        font-family: "Comme Bold";
+        src: url("/fonts/Comme-Bold.ttf") format("truetype");
         font-style: normal;
     }
-
 
     body,
     html,
     a {
-        font-family: 'Motiva Sans Light', sans-serif;
+        font-family: 'Comme Light', sans-serif;
     }
-
 
     body {
         margin:0;
@@ -57,7 +55,7 @@ export const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Motiva Sans Bold', serif;
+        font-family: 'Comme Bold', serif;
         color:rgb(27, 32, 45);
         font-size: 56px;
         line-height: 1.18;
