@@ -4,6 +4,7 @@ import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
+import WhatsAppButton from "../../common/Button/Flotante/WhatsApp";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const Container = lazy(() => import("../../common/Container"));
@@ -13,6 +14,7 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const Home = () => {
   return (
     <Container>
+      <WhatsAppButton />
       <ScrollToTop />
       <ContentBlock
         direction="right"

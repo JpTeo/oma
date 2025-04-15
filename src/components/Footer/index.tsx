@@ -1,99 +1,117 @@
-import { Row, Col } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
+import { Col, Row } from "antd";
+import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
-
-import i18n from "i18next";
+import { NavLink, Extra, LogoContainer, FooterContainer } from "./styles";
 import {
-  FooterSection,
-  Title,
-  NavLink,
-  Extra,
-  LogoContainer,
-  Para,
-  Large,
-  Chat,
-  Empty,
-  FooterContainer,
-  Language,
-  Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
-} from "./styles";
+  FacebookOutlined,
+  InstagramOutlined,
+  WhatsAppOutlined,
+} from "@ant-design/icons";
+import {
+  redirectFacebook,
+  redirectInstagram,
+  redirectWhatsApp,
+} from "../../common/utils/ContactsRedirect";
+import GoogleMap from "../Maps/maps";
 
 interface SocialLinkProps {
   href: string;
-  src: string;
+  icon: React.ReactElement;
+  onClick: () => void;
 }
 
-const Footer = ({ t }: { t: TFunction }) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
-
-  const SocialLink = ({ href, src }: SocialLinkProps) => {
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        key={src}
-        aria-label={src}
-      >
-        <SvgIcon src={src} width="25px" height="25px" />
-      </a>
-    );
-  };
+const Footer = () => {
+  const socialList: SocialLinkProps[] = [
+    {
+      href: "https://wa.me/+5491165879655",
+      icon: <WhatsAppOutlined style={{ fontSize: "2rem" }} />,
+      onClick: redirectWhatsApp,
+    },
+    {
+      href: "https://facebook.com/tupagina",
+      icon: <FacebookOutlined style={{ fontSize: "2rem" }} />,
+      onClick: redirectFacebook,
+    },
+    {
+      href: "https://instagram.com/tucuenta",
+      icon: <InstagramOutlined style={{ fontSize: "2rem" }} />,
+      onClick: redirectInstagram,
+    },
+  ];
 
   return (
-    <>
-     
-      <Extra>
-        <Container border={true}>
-          <Row
-            justify="space-between"
-            align="middle"
-            style={{ paddingTop: "3rem" }}
+    <Extra style={{ background: "#fef8c2", padding: "2%" }}>
+      <Row
+        gutter={[16, 16]}
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "stretch",
+          minHeight: "fit-content",
+        }}
+      >
+        <Col
+          xs={24}
+          md={18}
+          style={{
+            height: "200%",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              height: "50vh",
+              overflow: "hidden",
+            }}
           >
-            <NavLink to="/">
-              <LogoContainer>
-                <SvgIcon
-                  src="footerlogo1.png"
-                  aria-label="homepage"
-                  width="200px"
-                  height="150px"
-                />
-              </LogoContainer>
-            </NavLink>
-            <FooterContainer>
-              <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
+            <GoogleMap
+              address="Av. Corrientes, Cdad. Autónoma de Buenos Aires"
+              height="100%"
+              width="100%"
+              zoom={18}
+            />
+          </div>
+        </Col>
+
+        {/* LOGO + REDES */}
+        <Col
+          xs={24}
+          md={6}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#fef8c2",
+            gap: "2rem",
+            padding: "1rem",
+          }}
+        >
+          <NavLink to="/">
+            <LogoContainer>
+              <SvgIcon
+                src="footerlogo1.png"
+                aria-label="homepage"
+                width="200px"
+                height="150px"
               />
-              <SocialLink
-                href="https://twitter.com/Adrinlolx"
-                src="twitter.svg"
-              />
-              <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
-                src="linkedin.svg"
-              />
-              <SocialLink
-                href="https://medium.com/@lashakakabadze/"
-                src="medium.svg"
-              />
-              <a
-                href="https://ko-fi.com/Y8Y7H8BNJ"
-                target="_blank"
-                rel="noopener noreferrer"
+            </LogoContainer>
+          </NavLink>
+          <FooterContainer style={{ display: "flex", gap: "1.5rem" }}>
+            {socialList.map((item, idx) => (
+              <div
+                key={idx}
+                onClick={item.onClick}
+                style={{ cursor: "pointer" }}
               >
-              
-              </a>
-            </FooterContainer>
-          </Row>
-        </Container>
-      </Extra>
-    </>
+                {item.icon}
+              </div>
+            ))}
+          </FooterContainer>
+        </Col>
+      </Row>
+    </Extra>
   );
 };
 

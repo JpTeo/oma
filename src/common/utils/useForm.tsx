@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { notification } from "antd";
+import emailjs from "emailjs-com";
 
 interface IValues {
   name: string;
@@ -12,6 +13,9 @@ const initialValues: IValues = {
   email: "",
   message: "",
 };
+const SERVICE_ID = "tu_service_id";
+const TEMPLATE_ID = "tu_template_id";
+const USER_ID = "tu_user_id"; // también puede llamarse publicKey
 
 export const useForm = (validate: { (values: IValues): IValues }) => {
   const [formState, setFormState] = useState<{
@@ -28,42 +32,37 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     const errors = validate(values);
     setFormState((prevState) => ({ ...prevState, errors }));
 
-    const url = ""; // Fill in your API URL here
-
-    try {
-      if (Object.values(errors).every((error) => error === "")) {
-        const response = await fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+    if (Object.values(errors).every((error) => error === "")) {
+      try {
+        await emailjs.send(
+          SERVICE_ID,
+          TEMPLATE_ID,
+          {
+            name: values.name,
+            email: values.email,
+            message: values.message,
           },
-          body: JSON.stringify(values),
+          USER_ID
+        );
+
+        event.target.reset();
+        setFormState(() => ({
+          values: { ...initialValues },
+          errors: { ...initialValues },
+        }));
+
+        notification["success"]({
+          message: "Éxito",
+          description: "Tu mensaje fue enviado correctamente.",
         });
-
-        if (!response.ok) {
-          notification["error"]({
-            message: "Error",
-            description:
-              "There was an error sending your message, please try again later.",
-          });
-        } else {
-          event.target.reset();
-          setFormState(() => ({
-            values: { ...initialValues },
-            errors: { ...initialValues },
-          }));
-
-          notification["success"]({
-            message: "Success",
-            description: "Your message has been sent!",
-          });
-        }
+      } catch (error) {
+        console.error("EmailJS error", error);
+        notification["error"]({
+          message: "Error",
+          description:
+            "Hubo un problema al enviar el mensaje. Por favor, intenta más tarde.",
+        });
       }
-    } catch (error) {
-      notification["error"]({
-        message: "Error",
-        description: "Failed to submit form. Please try again later.",
-      });
     }
   };
 
