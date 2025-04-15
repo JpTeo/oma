@@ -1,13 +1,9 @@
 {
-  "title": "OMA Yoga y Pilates",
+  "title": "OMA Pilates & Yoga",
   "text": "Conectá con tu cuerpo y tu mente en un espacio diseñado para tu bienestar",
   "button": [
     {
-      "title": "Horarios"
-    },
-    {
-      "title": "Clase de prueba",
-      "color": "#fff"
+      "title": "Agenda tù clase de prueba"
     }
   ]
 }

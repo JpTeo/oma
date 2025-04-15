@@ -26,7 +26,7 @@ const Home = () => {
         direction="left"
         title={AboutContent.title}
         content={AboutContent.text}
-        section={AboutContent.section}
+        button={IntroContent.button}
         icon="yoga4.png"
         id="about"
       />
@@ -34,6 +34,7 @@ const Home = () => {
         direction="right"
         title={MissionContent.title}
         content={MissionContent.text}
+        button={IntroContent.button}
         icon="yoga5.png"
         id="mission"
       />
@@ -41,7 +42,8 @@ const Home = () => {
         direction="left"
         title={ProductContent.title}
         content={ProductContent.text}
-        icon="logooma.png"
+        button={IntroContent.button}
+        icon="logooma7.png"
         id="product"
       />
       <Contact

@@ -25,7 +25,7 @@ export const Styles = createGlobalStyle`
         padding:0;
         border: 0;
         outline: 0;
-        background: #fff;
+        background: rgb(78, 110, 126);
         overflow-x: hidden;
     }
 
@@ -56,7 +56,7 @@ export const Styles = createGlobalStyle`
     h5,
     h6 {
         font-family: 'Comme Bold', serif;
-        color:rgb(27, 32, 45);
+        color:rgb(247, 242, 193);
         font-size: 56px;
         line-height: 1.18;
 
@@ -70,7 +70,7 @@ export const Styles = createGlobalStyle`
     }
 
     p {
-        color: #1b202d;
+        color: rgb(252, 251, 234);
         font-size: 21px;        
         line-height: 1.41;
     }

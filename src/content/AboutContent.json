@@ -1,16 +1,10 @@
 {
   "title": "Pilates Reformer",
   "text": "Fortalecé tu cuerpo, mejorá tu postura y ganá flexibilidad con clases dinámicas y personalizadas. Con el método Pilates Reformer trabajamos fuerza, equilibrio y movilidad de forma segura y efectiva. En grupos reducidos, te guiamos para mejorar tu alineación postural y aumentar tu bienestar.",
-  "section": [
+ "button": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
-      "icon": "notes.svg"
-    },
-    {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
-      "icon": "notes.svg"
+      "title": "Agenda tù clase de prueba"
     }
   ]
+  
 }
