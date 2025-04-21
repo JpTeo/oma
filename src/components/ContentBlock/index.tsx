@@ -1,6 +1,5 @@
 import { Row, Col } from "antd";
 import { Fade } from "react-awesome-reveal";
-import { withTranslation } from "react-i18next";
 import { ContentBlockProps } from "./types";
 import { Button } from "../../common/Button";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -21,7 +20,6 @@ const ContentBlock = ({
   content,
   section,
   button,
-  t,
   id,
   direction,
 }: ContentBlockProps) => {
@@ -46,8 +44,8 @@ const ContentBlock = ({
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
-              <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
+              <h6>{title}</h6>
+              <Content>{content}</Content>
               <ButtonWrapper>
                 {button?.map(
                   (
@@ -63,7 +61,7 @@ const ContentBlock = ({
                         color={item.color}
                         onClick={() => scrollTo("about")}
                       >
-                        {t(item.title)}
+                        {item.title}
                       </Button>
                     );
                   }
@@ -88,8 +86,8 @@ const ContentBlock = ({
                               width="60px"
                               height="60px"
                             />
-                            <MinTitle>{t(item.title)}</MinTitle>
-                            <MinPara>{t(item.content)}</MinPara>
+                            <MinTitle>{item.title}</MinTitle>
+                            <MinPara>{item.content}</MinPara>
                           </Col>
                         );
                       }
@@ -104,4 +102,4 @@ const ContentBlock = ({
   );
 };
 
-export default withTranslation()(ContentBlock);
+export default ContentBlock;

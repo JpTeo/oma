@@ -1,7 +1,5 @@
 import { Col, Row, Typography } from "antd";
-import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
-import Container from "../../common/Container";
 import { NavLink, Extra, LogoContainer, FooterContainer } from "./styles";
 import {
   EnvironmentOutlined,
