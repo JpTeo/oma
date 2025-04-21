@@ -5,6 +5,7 @@ import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
 import WhatsAppButton from "../../common/Button/Flotante/WhatsApp";
+import FooterWithMap from "../../components/Footer";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const Container = lazy(() => import("../../common/Container"));
@@ -24,6 +25,9 @@ const Home = () => {
         icon="yoga6.png"
         id="intro"
       />
+      <div style={{ textAlign: "center", marginBottom: "-5rem" }}>
+        <h6>Nuestras clases</h6>
+      </div>
       <ContentBlock
         direction="left"
         title={AboutContent.title}
@@ -47,6 +51,9 @@ const Home = () => {
         button={IntroContent.button}
         icon="logooma7.png"
         id="product"
+      />
+      <FooterWithMap
+        address={"Av. Corrientes, Cdad. Autónoma de Buenos Aires"}
       />
       <Contact
         title={ContactContent.title}

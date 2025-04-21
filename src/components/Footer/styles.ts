@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const FooterSection = styled("footer")`
-  background: rgb(247, 242, 193);
-  padding: 2.5rem 0;
-`;
-
 export const Title = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
@@ -19,9 +14,8 @@ export const Title = styled("h4")`
 export const NavLink = styled(Link)`
   display: block;
   font-size: 1rem;
-  margin-bottom: 0.625rem;
+  margin-bottom: 10%;
   transition: all 0.2s ease-in-out;
-
   &:hover,
   &:active,
   &:focus {
@@ -30,17 +24,17 @@ export const NavLink = styled(Link)`
 `;
 
 export const Extra = styled("section")`
-  background: rgb(247, 242, 193);
   position: relative;
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 2rem;
+  padding: 5%;
+  color: white;
 `;
 
 export const LogoContainer = styled("div")`
   display: flex;
   position: relative;
+  display: flex;
+  justify-content: center;
 `;
 
 export const Para = styled("div")`
