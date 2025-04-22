@@ -22,7 +22,7 @@ const Home = () => {
         title={IntroContent.title}
         content={IntroContent.text}
         button={IntroContent.button}
-        icon="yoga6.png"
+        icon="omaheader2.png"
         id="intro"
       />
       <div style={{ textAlign: "center", marginBottom: "-5rem" }}>
@@ -33,7 +33,7 @@ const Home = () => {
         title={AboutContent.title}
         content={AboutContent.text}
         button={IntroContent.button}
-        icon="yoga4.png"
+        icon="Pilatesoma.png"
         id="about"
       />
       <ContentBlock
@@ -41,7 +41,7 @@ const Home = () => {
         title={MissionContent.title}
         content={MissionContent.text}
         button={IntroContent.button}
-        icon="yoga5.png"
+        icon="yogaoma.png"
         id="mission"
       />
       <ContentBlock
