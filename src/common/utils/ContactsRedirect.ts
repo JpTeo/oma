@@ -1,8 +1,6 @@
-const phoneNumber = "+11111";
 
 export const redirectWhatsApp = () => {
-  const cleanedNumber = phoneNumber?.replace(/[^\d+]/g, "");
-  const whatsappLink = `https://wa.me/${cleanedNumber}`;
+  const whatsappLink = `https://wa.me/message/UD7CSTBCN4TWH1`;
   console.log("Link generado:", whatsappLink);
   window.open(whatsappLink, "_blank");
 };
@@ -13,6 +11,6 @@ export const redirectFacebook = () => {
 };
 
 export const redirectInstagram = () => {
-  const instagramLink = "https://www.instagram.com/";
+  const instagramLink = "https://www.instagram.com/omapilatesyoga/";
   window.open(instagramLink, "_blank");
 };

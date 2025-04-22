@@ -18,7 +18,6 @@ interface ComponentMap {
   address: string;
 }
 interface SocialLinkProps {
-  href: string;
   icon: React.ReactElement;
   onClick: () => void;
 }
@@ -26,17 +25,14 @@ interface SocialLinkProps {
 const FooterWithMap = ({ address }: ComponentMap) => {
   const socialList: SocialLinkProps[] = [
     {
-      href: "https://wa.me/+5491165879655",
       icon: <WhatsAppOutlined style={{ fontSize: "2rem" }} />,
       onClick: redirectWhatsApp,
     },
     {
-      href: "https://facebook.com/tupagina",
       icon: <FacebookOutlined style={{ fontSize: "2rem" }} />,
       onClick: redirectFacebook,
     },
     {
-      href: "https://instagram.com/tucuenta",
       icon: <InstagramOutlined style={{ fontSize: "2rem" }} />,
       onClick: redirectInstagram,
     },
@@ -85,9 +81,11 @@ const FooterWithMap = ({ address }: ComponentMap) => {
               >
                 <EnvironmentOutlined />
                 {address}
+                <br></br>
+                Timbre F
               </Typography>
             </NavLink>
-            <Typography
+            <h4
               style={{
                 fontFamily: 'font-family: "Motiva Sans Light", sans-serif;',
                 fontSize: "1.5rem",
@@ -96,7 +94,7 @@ const FooterWithMap = ({ address }: ComponentMap) => {
               }}
             >
               Seguinos en nuestras redes !
-            </Typography>
+            </h4>
             <FooterContainer style={{ display: "flex", gap: "1.5rem" }}>
               {socialList.map((item, idx) => (
                 <div

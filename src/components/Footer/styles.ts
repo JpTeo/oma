@@ -14,7 +14,6 @@ export const Title = styled("h4")`
 export const NavLink = styled(Link)`
   display: block;
   font-size: 1rem;
-  margin-bottom: 10%;
   transition: all 0.2s ease-in-out;
   &:hover,
   &:active,
@@ -34,7 +33,7 @@ export const LogoContainer = styled("div")`
   display: flex;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: start;
 `;
 
 export const Para = styled("div")`
@@ -82,14 +81,12 @@ export const Empty = styled("div")`
 `;
 
 export const FooterContainer = styled("div")`
-  max-width: 510px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   text-align: center;
   align-items: center;
   transition: all 0.1s ease-in-out;
-
   a {
     &:hover,
     &:active,
