@@ -1,6 +1,12 @@
 import { Col, Row, Typography } from "antd";
 import { SvgIcon } from "../../common/SvgIcon";
-import { NavLink, Extra, LogoContainer, FooterContainer } from "./styles";
+import {
+  Extra,
+  LogoContainer,
+  FooterContainer,
+  SubTitle,
+  ContainerMapa,
+} from "./styles";
 import {
   EnvironmentOutlined,
   FacebookOutlined,
@@ -58,44 +64,32 @@ const FooterWithMap = ({ address }: ComponentMap) => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "space-around",
-              // backgroundColor: "#fef8c2",
             }}
           >
-            <NavLink to="/">
-              <LogoContainer>
-                <SvgIcon
-                  src="logooma7.png"
-                  aria-label="homepage"
-                  width="200px"
-                  height="200px"
-                />
-              </LogoContainer>
-              <Typography
-                style={{
-                  fontFamily: 'font-family: "Motiva Sans Light", sans-serif;',
-                  fontSize: "1.5rem",
-                  fontWeight: "bold",
-                  color: "white",
-                  textAlign: "center",
-                }}
-              >
-                <EnvironmentOutlined />
-                {address}
-                <br></br>
-                Timbre F
-              </Typography>
-            </NavLink>
-            <h4
+            <LogoContainer>
+              <SvgIcon
+                src="logooma7.png"
+                aria-label="homepage"
+                width="200px"
+                height="200px"
+              />
+            </LogoContainer>
+            <Typography
               style={{
                 fontFamily: 'font-family: "Motiva Sans Light", sans-serif;',
                 fontSize: "1.5rem",
-                fontWeight: "semi-bold",
+                fontWeight: "bold",
                 color: "white",
+                textAlign: "center",
               }}
             >
-              Seguinos en nuestras redes !
-            </h4>
-            <FooterContainer style={{ display: "flex", gap: "1.5rem" }}>
+              <EnvironmentOutlined />
+              {address}
+              <br></br>
+              Timbre F
+            </Typography>
+            <SubTitle>Seguinos en nuestras redes !</SubTitle>
+            <FooterContainer>
               {socialList.map((item, idx) => (
                 <div
                   key={idx}
@@ -114,21 +108,14 @@ const FooterWithMap = ({ address }: ComponentMap) => {
               height: "200%",
             }}
           >
-            <div
-              style={{
-                width: "100%",
-                height: "50vh",
-                overflow: "hidden",
-                borderRadius: "20px",
-              }}
-            >
+            <ContainerMapa>
               <GoogleMap
                 address={address}
                 height="100%"
                 width="100%"
                 zoom={18}
               />
-            </div>
+            </ContainerMapa>
           </Col>
         </Row>
       </Fade>

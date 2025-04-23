@@ -5,15 +5,18 @@ interface StyledRowProps {
 }
 export const ContentSection = styled("section")`
   position: relative;
-  padding: 10rem 0 8rem;
+  padding-bottom: 8rem;
 
   @media only screen and (max-width: 1024px) {
-    padding: 4rem 0 4rem;
+    padding-bottom: 10rem;
   }
 `;
-
 export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const StyledRow = styled(Row).withConfig({
@@ -29,6 +32,9 @@ export const ContentWrapper = styled("div")`
 
   @media only screen and (max-width: 575px) {
     padding-top: 4rem;
+  }
+  @media only screen and (max-width: 768px) {
+    text-align: center;
   }
 `;
 
@@ -55,12 +61,16 @@ export const ButtonWrapper = styled("div")`
   display: flex;
   justify-content: space-between;
   max-width: 100%;
-
   @media screen and (min-width: 1024px) {
     max-width: 80%;
   }
-
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
   button:last-child {
     margin-left: 20px;
+    @media only screen and (max-width: 768px) {
+      margin-left: 0px;
+    }
   }
 `;

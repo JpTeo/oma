@@ -106,5 +106,9 @@ export const Styles = createGlobalStyle`
 
     .ant-drawer-content-wrapper {
         width: 300px !important;
+        background:red;
+    }
+   .ant-drawer-content {
+         background:#4E6E7E;
     }
 `;

@@ -19,16 +19,22 @@ const Contact = ({ title, content, id }: ContactProps) => {
 
   return (
     <ContactContainer id={id}>
-      <Row justify="space-between" align="middle">
-        <Col lg={12} md={12} sm={24} xs={24}>
+      <Row justify="space-between" align="middle" className="contact-row">
+        <Col
+          lg={{ span: 12, order: 1 }} // En desktop: primero el formulario
+          md={{ span: 11, order: 1 }}
+          sm={{ span: 24, order: 2 }} // En mobile: segundo
+          xs={{ span: 24, order: 2 }}
+          className="form-column"
+        >
           <Slide direction="left" triggerOnce style={{ width: "100%" }}>
             <FormGroup autoComplete="off" onSubmit={handleSubmit}>
               <Col span={24}>
                 <Input
                   type="text"
-                  name="name"
+                  name="nombre"
                   placeholder="Nombre"
-                  value={values.name || ""}
+                  value={values.nombre || ""}
                   onChange={handleChange}
                 />
                 <ValidationType type="name" />
@@ -45,9 +51,9 @@ const Contact = ({ title, content, id }: ContactProps) => {
               </Col>
               <Col span={24}>
                 <TextArea
-                  placeholder="Mensaje"
-                  value={values.message || ""}
-                  name="message"
+                  placeholder="mensaje"
+                  value={values.mensaje || ""}
+                  name="Mensaje"
                   onChange={handleChange}
                 />
                 <ValidationType type="message" />
@@ -58,7 +64,14 @@ const Contact = ({ title, content, id }: ContactProps) => {
             </FormGroup>
           </Slide>
         </Col>
-        <Col lg={12} md={11} sm={24} xs={24}>
+
+        <Col
+          lg={{ span: 12, order: 2 }} // En desktop: segundo el texto
+          md={{ span: 12, order: 2 }}
+          sm={{ span: 24, order: 1 }} // En mobile: primero
+          xs={{ span: 24, order: 1 }}
+          className="content-column"
+        >
           <Slide direction="right" triggerOnce style={{ marginLeft: "5%" }}>
             <Block title={title} content={content} />
           </Slide>

@@ -16,9 +16,13 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const Home = () => {
   return (
     <>
+      <WhatsAppButton />
+      <ScrollToTop />
       <Container>
-        <WhatsAppButton />
-        <ScrollToTop />
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <ContentBlock
           direction="right"
           title={IntroContent.title}
@@ -27,9 +31,9 @@ const Home = () => {
           icon="omaheader2.png"
           id="intro"
         />
-        <div style={{ textAlign: "center", marginBottom: "-5rem" }}>
-          <h6>Nuestras clases</h6>
-        </div>
+        <h6 style={{ textAlign: "center", margin: "5% 0%  10% 0" }}>
+          Nuestras clases
+        </h6>
         <ContentBlock
           direction="left"
           title={AboutContent.title}

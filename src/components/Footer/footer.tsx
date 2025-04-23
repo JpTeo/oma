@@ -1,9 +1,8 @@
 "use client";
 
 import type React from "react";
-import { NavLink, Extra, LogoContainer, FooterContainer } from "./styles";
+import { NavLink, Extra, FooterContainer, DivImage } from "./styles";
 import { Col, Image, Row, Typography } from "antd";
-import { SvgIcon } from "../../common/SvgIcon";
 import {
   FacebookOutlined,
   InstagramOutlined,
@@ -39,11 +38,9 @@ const Footer = () => {
   return (
     <>
       <div
-        style={{ background: "#fef8c2", height: "40px", width: "100%" }}
+        style={{ background: "#B2D8DD", height: "40px", width: "100%" }}
       ></div>
-
-      {/* Main footer section */}
-      <Extra style={{ background: "#00565B", padding: "2rem 4rem" }}>
+      <Extra style={{ background: "#FCFBEA", padding: "2rem 4rem" }}>
         <Row
           gutter={[16, 16]}
           style={{
@@ -55,35 +52,26 @@ const Footer = () => {
         >
           <Col xs={24} md={12}>
             <NavLink to="/">
-              <div
-                style={{
-                  background: "#ffffff",
-                  borderRadius: "50%",
-                  width: "7vw",
-                  height: "7vw",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                <Image src="/img/svg/footerlogo1.png" width={"10vw"}></Image>
-              </div>
+              <DivImage>
+                <Image src="/img/svg/footerlogo1.png" />
+              </DivImage>
             </NavLink>
           </Col>
           <Col xs={24} md={12} style={{ textAlign: "right" }}>
-            <div style={{ color: "white" }}>
+            <div style={{ color: "4E6E7E" }}>
               <Typography.Title
                 level={5}
-                style={{ color: "white", marginBottom: "1rem" }}
+                style={{ color: "4E6E7E", marginBottom: "1rem" }}
               >
                 Información de contacto
               </Typography.Title>
-              <Typography.Paragraph style={{ color: "white", margin: 0 }}>
+              <Typography.Paragraph style={{ color: "4E6E7E", margin: 0 }}>
                 Av. Cabildo 3047, timbre F. Ciudad Autónoma
               </Typography.Paragraph>
-              <Typography.Paragraph style={{ color: "white", margin: 0 }}>
+              <Typography.Paragraph style={{ color: "4E6E7E", margin: 0 }}>
                 de Buenos Aires - Argentina
               </Typography.Paragraph>
-              <Typography.Paragraph style={{ color: "white", margin: 0 }}>
+              <Typography.Paragraph style={{ color: "4E6E7E", margin: 0 }}>
                 Teléfono: +5491127716208 | contacto@oma-ba.com.ar
               </Typography.Paragraph>
               <FooterContainer
@@ -117,8 +105,6 @@ const Footer = () => {
           </Col>
         </Row>
       </Extra>
-
-      {/* Bottom copyright bar */}
       <div
         style={{
           background: "#B2D8DD",
@@ -128,9 +114,6 @@ const Footer = () => {
       >
         <Typography.Text style={{ fontSize: "0.9rem" }}>
           Creado Teo-Coop
-          {/* <a href="/privacy" style={{ color: "inherit" }}>
-            Política de privacidad
-          </a> */}
         </Typography.Text>
       </div>
     </>

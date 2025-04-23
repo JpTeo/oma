@@ -3,15 +3,15 @@ import { notification } from "antd";
 import emailjs from "emailjs-com";
 
 interface IValues {
-  name: string;
+  nombre: string;
   email: string;
-  message: string;
+  mensaje: string;
 }
 
 const initialValues: IValues = {
-  name: "",
+  nombre: "",
   email: "",
-  message: "",
+  mensaje: "",
 };
 const SERVICE_ID = "tu_service_id";
 const TEMPLATE_ID = "tu_template_id";
@@ -38,9 +38,9 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
           SERVICE_ID,
           TEMPLATE_ID,
           {
-            name: values.name,
+            name: values.nombre,
             email: values.email,
-            message: values.message,
+            message: values.mensaje,
           },
           USER_ID
         );

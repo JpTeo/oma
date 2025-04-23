@@ -10,7 +10,18 @@ export const Title = styled("h4")`
     padding: 1.5rem 0;
   }
 `;
+export const SubTitle = styled("h4")`
+  font-family: "Motiva Sans Light", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
 
+  @media (max-width: 768px) {
+    text-align: center;
+    margin: 10% 0;
+  }
+`;
 export const NavLink = styled(Link)`
   display: block;
   font-size: 1rem;
@@ -19,6 +30,24 @@ export const NavLink = styled(Link)`
   &:active,
   &:focus {
     color: #15418e;
+  }
+  @media (max-width: 768px) {
+    display: flex !important;
+    justify-content: end;
+  }
+`;
+export const DivImage = styled("div")`
+  border-radius: 50%;
+  width: 7vw;
+  height: 7vw;
+  border: 2px solid #4e6e7e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 768px) {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
   }
 `;
 
@@ -30,10 +59,23 @@ export const Extra = styled("section")`
 `;
 
 export const LogoContainer = styled("div")`
-  display: flex;
   position: relative;
   display: flex;
   justify-content: start;
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-bottom: 10%;
+  }
+`;
+export const ContainerMapa = styled("div")`
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 20px;
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-top: 10%;
+  }
 `;
 
 export const Para = styled("div")`
@@ -86,6 +128,7 @@ export const FooterContainer = styled("div")`
   justify-content: space-between;
   text-align: center;
   align-items: center;
+  gap: 1.5rem;
   transition: all 0.1s ease-in-out;
   a {
     &:hover,
@@ -96,10 +139,12 @@ export const FooterContainer = styled("div")`
       transform: scale(1.1);
     }
   }
-
-  @media screen and (max-width: 769px) {
+  @media (max-width: 768px) {
+    margin: 5% 0;
+  }
+  @media screen and (max-width: 768px) {
     width: auto;
-
+    margin-boton: 5%;
     a:not(:last-child) {
       display: none;
     }
@@ -117,16 +162,6 @@ export const FooterContainer = styled("div")`
   }
 `;
 
-export const Language = styled("h4")`
-  font-size: 22px;
-  text-transform: capitalize;
-  color: #18216d;
-
-  @media screen and (max-width: 414px) {
-    padding: 1.5rem 0;
-  }
-`;
-
 export const Label = styled("label")`
   font-size: 22px;
   text-transform: capitalize;
@@ -139,23 +174,4 @@ export const Label = styled("label")`
     padding: 1.5rem 0;
     margin-bottom: 1rem;
   }
-`;
-
-export const LanguageSwitch = styled("div")`
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-
-  &:hover,
-  &:active,
-  &:focus {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-`;
-
-export const LanguageSwitchContainer = styled("div")`
-  display: flex;
-  justify-content: space-between;
-  width: 85px;
 `;
