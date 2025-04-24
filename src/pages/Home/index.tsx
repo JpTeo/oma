@@ -20,9 +20,7 @@ const Home = () => {
       <ScrollToTop />
       <Container>
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+       
         <ContentBlock
           direction="right"
           title={IntroContent.title}
