@@ -13,6 +13,7 @@ import {
   StyledRow,
   ButtonWrapper,
 } from "./styles";
+import { redirectWhatsApp } from "../../common/utils/ContactsRedirect";
 
 const ContentBlock = ({
   icon,
@@ -59,7 +60,7 @@ const ContentBlock = ({
                       <Button
                         key={id}
                         color={item.color}
-                        onClick={() => scrollTo("about")}
+                        onClick={redirectWhatsApp}
                       >
                         {item.title}
                       </Button>

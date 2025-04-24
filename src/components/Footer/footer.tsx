@@ -37,9 +37,6 @@ const Footer = () => {
 
   return (
     <>
-      <div
-        style={{ background: "#B2D8DD", height: "40px", width: "100%" }}
-      ></div>
       <Extra style={{ background: "#FCFBEA", padding: "2rem 4rem" }}>
         <Row
           gutter={[16, 16]}
