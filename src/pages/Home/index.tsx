@@ -7,6 +7,7 @@ import ContactContent from "../../content/ContactContent.json";
 import WhatsAppButton from "../../common/Button/Flotante/WhatsApp";
 import FooterWithMap from "../../components/Footer";
 import Footer from "../../components/Footer/footer";
+import FullWidthContentBlock from "../../components/FullWithScreenContentBlock";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const Container = lazy(() => import("../../common/Container"));
@@ -16,6 +17,14 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const Home = () => {
   return (
     <>
+      <FullWidthContentBlock
+        direction="right"
+        title={IntroContent.title}
+        content={IntroContent.text}
+        button={IntroContent.button}
+        icon="omaheader2.png"
+        id="intro"
+      />
       <WhatsAppButton />
       <ScrollToTop />
       <Container>
@@ -23,14 +32,7 @@ const Home = () => {
         <br></br>
         <br></br>
         <br></br>
-        <ContentBlock
-          direction="right"
-          title={IntroContent.title}
-          content={IntroContent.text}
-          button={IntroContent.button}
-          icon="omaheader2.png"
-          id="intro"
-        />
+
         <h6 style={{ textAlign: "center", margin: "5% 0%  10% 0" }}>
           Nuestras clases
         </h6>

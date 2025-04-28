@@ -52,7 +52,6 @@ const Header = () => {
       </>
     );
   };
-
   return (
     <HeaderSection>
       <Container>
