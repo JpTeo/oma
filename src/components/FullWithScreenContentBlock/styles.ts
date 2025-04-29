@@ -28,8 +28,8 @@ export const LogoTextLight = styled.span`
 `;
 export const HeroSection = styled.section<HeroSectionProps>`
   position: relative;
-  width: 100%; /* antes tenías 95%, ahora 100% */
-  height: 90vh; /* más común usar 100vh para un hero */
+  width: 95%; /* antes tenías 95%, ahora 100% */
+  height: 80vh; /* más común usar 100vh para un hero */
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
   background-size: 110%;
   background-position: center;
@@ -70,7 +70,6 @@ export const MainHeading = styled.h1`
 
 export const ButtonContainer = styled.div`
   display: flex;
-  gap: 1rem;
   margin-top: 2rem;
 
   @media (max-width: 480px) {

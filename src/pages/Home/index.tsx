@@ -17,14 +17,24 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const Home = () => {
   return (
     <>
-      <FullWidthContentBlock
-        direction="right"
-        title={IntroContent.title}
-        content={IntroContent.text}
-        button={IntroContent.button}
-        icon="omaheader2.png"
-        id="intro"
-      />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+        }}
+      >
+        <FullWidthContentBlock
+          direction="right"
+          title={IntroContent.title}
+          content={IntroContent.text}
+          button={IntroContent.button}
+          icon="omaheader2.png"
+          id="intro"
+        />
+      </div>
       <WhatsAppButton />
       <ScrollToTop />
       <Container>
