@@ -10,6 +10,7 @@ import {
   HeroContent,
   MainHeading,
   ButtonContainer,
+  StyledContent,
 } from "./styles";
 import { redirectWhatsApp } from "../../common/utils/ContactsRedirect";
 
@@ -38,15 +39,8 @@ const FullWidthContentBlock = ({
               }}
             >
               <Fade direction="left" triggerOnce>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "start",
-                    justifyContent: "space-around",
-                    flexDirection: "column",
-                    height: "50vh",
-                  }}
-                >
+                <StyledContent>
+                  {" "}
                   <TextHighlight>{title}</TextHighlight>
                   <MainHeading>{content}</MainHeading>
                   <ButtonContainer>
@@ -56,7 +50,7 @@ const FullWidthContentBlock = ({
                       </Button>
                     ))}
                   </ButtonContainer>
-                </div>
+                </StyledContent>
               </Fade>
             </Col>
           </Row>

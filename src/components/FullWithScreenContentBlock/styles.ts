@@ -31,7 +31,7 @@ export const HeroSection = styled.section<HeroSectionProps>`
   width: 95%; /* antes tenías 95%, ahora 100% */
   height: 80vh; /* más común usar 100vh para un hero */
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
-  background-size: 110%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -39,13 +39,27 @@ export const HeroSection = styled.section<HeroSectionProps>`
   padding: 0;
   border-radius: 40px;
 `;
+export const StyledContent = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 80vh;
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+`;
 
 export const HeroContent = styled.div`
   max-width: 100%;
   margin: 0 auto;
+  // height: 100%;
   height: 100%;
   padding: 0 5rem;
   background: linear-gradient(to right, #00000080 0%, rgba(51, 51, 51, 0) 100%);
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 `;
 
 export const TextHighlight = styled.h2`
@@ -54,6 +68,9 @@ export const TextHighlight = styled.h2`
   font-weight: bold;
   margin-bottom: 1rem;
   text-decoration: underline;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const MainHeading = styled.h1`
@@ -64,7 +81,7 @@ export const MainHeading = styled.h1`
   margin-bottom: 2rem;
 
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 1rem;
   }
 `;
 
