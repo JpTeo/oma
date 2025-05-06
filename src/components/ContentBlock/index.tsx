@@ -24,13 +24,7 @@ const ContentBlock = ({
   id,
   direction,
 }: ContentBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
+  console.log(button, "asas buton");
   return (
     <ContentSection>
       <Fade direction={direction} triggerOnce>

@@ -1,25 +1,11 @@
 import { Col, Row, Typography } from "antd";
-import { SvgIcon } from "../../common/SvgIcon";
-import {
-  Extra,
-  LogoContainer,
-  FooterContainer,
-  SubTitle,
-  ContainerMapa,
-} from "./styles";
-import {
-  EnvironmentOutlined,
-  FacebookOutlined,
-  InstagramOutlined,
-  WhatsAppOutlined,
-} from "@ant-design/icons";
-import {
-  redirectFacebook,
-  redirectInstagram,
-  redirectWhatsApp,
-} from "../../common/utils/ContactsRedirect";
 import GoogleMap from "../Maps/maps";
+import { ContainerMapa, Extra, FooterContainer, LogoContainer, SubTitle } from "./styles";
+import { SvgIcon } from "../../common/SvgIcon";
+import { EnvironmentOutlined, FacebookOutlined, InstagramOutlined, WhatsAppOutlined } from "@ant-design/icons";
 import { Fade } from "react-awesome-reveal";
+import { redirectFacebook, redirectInstagram, redirectWhatsApp } from "../../common/utils/ContactsRedirect";
+
 interface ComponentMap {
   address: string;
 }
@@ -105,15 +91,18 @@ const FooterWithMap = ({ address }: ComponentMap) => {
             xs={24}
             md={12}
             style={{
-              height: "200%",
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            <ContainerMapa>
+            <ContainerMapa style={{ width: "100%", height: "400px" }}>
               <GoogleMap
                 address={address}
+                zoom={18}
                 height="100%"
                 width="100%"
-                zoom={18}
               />
             </ContainerMapa>
           </Col>

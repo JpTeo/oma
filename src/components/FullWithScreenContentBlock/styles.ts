@@ -20,7 +20,6 @@ export const Logo = styled.div`
 
 export const LogoText = styled.span`
   font-size: 1.5rem;
-  font-weight: bold;
 `;
 
 export const LogoTextLight = styled.span`
@@ -28,7 +27,7 @@ export const LogoTextLight = styled.span`
 `;
 export const HeroSection = styled.section<HeroSectionProps>`
   position: relative;
-  width: 95%; /* antes tenías 95%, ahora 100% */
+  width: 100%; /* antes tenías 95%, ahora 100% */
   height: 80vh; /* más común usar 100vh para un hero */
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
   background-size: cover;
@@ -37,26 +36,35 @@ export const HeroSection = styled.section<HeroSectionProps>`
   overflow: hidden;
   margin: 0;
   padding: 0;
-  border-radius: 40px;
 `;
 export const StyledContent = styled.div`
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: center;
+  //background: red;
+  width: 80vw;
   flex-direction: column;
   height: 80vh;
+  padding: 0 60px;
+
   @media (max-width: 768px) {
     padding: 2rem 0;
   }
 `;
 
 export const HeroContent = styled.div`
-  max-width: 100%;
-  margin: 0 auto;
+  max-width: 100vw;
   // height: 100%;
   height: 100%;
-  padding: 0 5rem;
-  background: linear-gradient(to right, #00000080 0%, rgba(51, 51, 51, 0) 100%);
+  display: flex;
+  aling-intems: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    #00000095 0%,
+    #00000090 50%,
+    transparent 100%
+  );
   @media (max-width: 768px) {
     padding: 0 2rem;
   }
@@ -66,8 +74,8 @@ export const TextHighlight = styled.h2`
   color: ;
   font-size: 4rem;
   font-weight: bold;
+  font-family: "RedHatDisplay", sans-serif;
   margin-bottom: 1rem;
-  text-decoration: underline;
   @media (max-width: 768px) {
     font-size: 1.5rem;
   }
@@ -75,10 +83,10 @@ export const TextHighlight = styled.h2`
 
 export const MainHeading = styled.h1`
   color: white;
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 2rem;
   line-height: 1.1;
   margin-bottom: 2rem;
+  font-family: "RedHatDisplay", sans-serif;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -88,7 +96,6 @@ export const MainHeading = styled.h1`
 export const ButtonContainer = styled.div`
   display: flex;
   margin-top: 2rem;
-
   @media (max-width: 480px) {
     flex-direction: column;
   }

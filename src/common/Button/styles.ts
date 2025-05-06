@@ -5,7 +5,6 @@ export const StyledButton = styled("button")<{ color?: string }>`
   color: ${(p) => (p.color ? "#2E186A" : "#4E6E7E")};
   font-size: 1rem;
   font-weight: 700;
-  width: 100%;
   border: 1px solid #bfb3a1;
   border-radius: 4px;
   padding: 13px 10px;

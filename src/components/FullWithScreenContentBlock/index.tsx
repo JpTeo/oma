@@ -17,19 +17,15 @@ import { redirectWhatsApp } from "../../common/utils/ContactsRedirect";
 const FullWidthContentBlock = ({
   icon,
   title,
-  content,
-  section,
   button,
   id,
-  direction,
 }: ContentBlockProps) => {
-  console.log(icon, "asasas ");
 
   return (
     <>
       <HeroSection backgroundImage={`/img/svg/${icon}`}>
         <HeroContent>
-          <Row gutter={[32, 32]} style={{ height: "100%" }}>
+          <Row style={{ height: "100%" }}>
             <Col
               xs={24}
               lg={12}
@@ -40,14 +36,14 @@ const FullWidthContentBlock = ({
             >
               <Fade direction="left" triggerOnce>
                 <StyledContent>
-                  {" "}
                   <TextHighlight>{title}</TextHighlight>
-                  <MainHeading>{content}</MainHeading>
+                  <MainHeading>
+                    Conecta con tu cuerpo y tu mente <br /> en un espacio
+                    diseñado para tu bienestar
+                  </MainHeading>
                   <ButtonContainer>
                     {button?.map(({ title }) => (
-                      <Button color="#FCFBEA" onClick={redirectWhatsApp}>
-                        {title}
-                      </Button>
+                      <Button onClick={redirectWhatsApp}>{title}</Button>
                     ))}
                   </ButtonContainer>
                 </StyledContent>

@@ -59,7 +59,7 @@ export const MinPara = styled("p")`
 
 export const ButtonWrapper = styled("div")`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 100%;
   @media screen and (min-width: 1024px) {
     max-width: 80%;

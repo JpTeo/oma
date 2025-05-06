@@ -13,7 +13,13 @@ export const Styles = createGlobalStyle`
         src: url("/fonts/Comme-Bold.ttf") format("truetype");
         font-style: normal;
     }
-
+ @font-face {
+    font-family: 'RedHatDisplay';
+    src: url('/fonts/RedHatDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
     body,
     html,
     a {
