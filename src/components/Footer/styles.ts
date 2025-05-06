@@ -11,7 +11,8 @@ export const Title = styled("h4")`
   }
 `;
 export const SubTitle = styled("h4")`
-  font-family: "Motiva Sans Light", sans-serif;
+  font-family: "RedHatDisplay", sans-serif;
+
   font-size: 1.5rem;
   font-weight: 600;
   color: white;
@@ -168,7 +169,7 @@ export const Label = styled("label")`
   color: #18216d;
   display: block;
   margin-bottom: 2rem;
-  font-family: "Motiva Sans Bold", serif;
+  font-family: "RedHatDisplay", sans-serif;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;

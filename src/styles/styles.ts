@@ -23,7 +23,7 @@ export const Styles = createGlobalStyle`
     body,
     html,
     a {
-        font-family: 'Comme Light', sans-serif;
+  font-family: "RedHatDisplay", sans-serif;
     }
 
     body {
@@ -61,7 +61,7 @@ export const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Comme Bold', serif;
+  font-family: "RedHatDisplay", sans-serif;
         color:rgb(247, 242, 193);
         font-size: 56px;
         line-height: 1.18;

@@ -1,10 +1,25 @@
 import { Col, Row, Typography } from "antd";
 import GoogleMap from "../Maps/maps";
-import { ContainerMapa, Extra, FooterContainer, LogoContainer, SubTitle } from "./styles";
+import {
+  ContainerMapa,
+  Extra,
+  FooterContainer,
+  LogoContainer,
+  SubTitle,
+} from "./styles";
 import { SvgIcon } from "../../common/SvgIcon";
-import { EnvironmentOutlined, FacebookOutlined, InstagramOutlined, WhatsAppOutlined } from "@ant-design/icons";
+import {
+  EnvironmentOutlined,
+  FacebookOutlined,
+  InstagramOutlined,
+  WhatsAppOutlined,
+} from "@ant-design/icons";
 import { Fade } from "react-awesome-reveal";
-import { redirectFacebook, redirectInstagram, redirectWhatsApp } from "../../common/utils/ContactsRedirect";
+import {
+  redirectFacebook,
+  redirectInstagram,
+  redirectWhatsApp,
+} from "../../common/utils/ContactsRedirect";
 
 interface ComponentMap {
   address: string;
@@ -62,7 +77,7 @@ const FooterWithMap = ({ address }: ComponentMap) => {
             </LogoContainer>
             <Typography
               style={{
-                fontFamily: 'font-family: "Motiva Sans Light", sans-serif;',
+                fontFamily: 'font-family: "RedHatDisplay", sans-serif',
                 fontSize: "1.5rem",
                 fontWeight: "bold",
                 color: "white",
