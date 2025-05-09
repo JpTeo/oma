@@ -3,19 +3,19 @@ import { notification } from "antd";
 import emailjs from "emailjs-com";
 
 interface IValues {
-  nombre: string;
+  name: string;
   email: string;
-  mensaje: string;
+  message: string;
 }
 
 const initialValues: IValues = {
-  nombre: "",
+  name: "",
   email: "",
-  mensaje: "",
+  message: "",
 };
-const SERVICE_ID = "tu_service_id";
-const TEMPLATE_ID = "tu_template_id";
-const USER_ID = "tu_user_id"; // también puede llamarse publicKey
+const SERVICE_ID = process.env.REACT_APP_SERVICE_ID || "";
+const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID || "";
+const USER_ID = process.env.REACT_APP_USER_ID || "";
 
 export const useForm = (validate: { (values: IValues): IValues }) => {
   const [formState, setFormState] = useState<{
@@ -25,38 +25,38 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     values: { ...initialValues },
     errors: { ...initialValues },
   });
-
   const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
     const values = formState.values;
     const errors = validate(values);
     setFormState((prevState) => ({ ...prevState, errors }));
-
     if (Object.values(errors).every((error) => error === "")) {
       try {
         await emailjs.send(
           SERVICE_ID,
           TEMPLATE_ID,
           {
-            name: values.nombre,
+            name: values.name,
             email: values.email,
-            message: values.mensaje,
+            message: values.message,
+            time: new Date().toLocaleString("es-AR"),
           },
           USER_ID
         );
+        notification["success"]({
+          message: "Éxito",
+          description: "Tu mensaje fue enviado correctamente.",
+        });
 
+        // Limpiar el formulario
         event.target.reset();
         setFormState(() => ({
           values: { ...initialValues },
           errors: { ...initialValues },
         }));
-
-        notification["success"]({
-          message: "Éxito",
-          description: "Tu mensaje fue enviado correctamente.",
-        });
       } catch (error) {
         console.error("EmailJS error", error);
+
         notification["error"]({
           message: "Error",
           description:

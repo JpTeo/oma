@@ -1,7 +1,6 @@
 
 export const redirectWhatsApp = () => {
   const whatsappLink = `https://wa.me/message/UD7CSTBCN4TWH1`;
-  console.log("Link generado:", whatsappLink);
   window.open(whatsappLink, "_blank");
 };
 

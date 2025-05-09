@@ -24,7 +24,6 @@ const ContentBlock = ({
   id,
   direction,
 }: ContentBlockProps) => {
-  console.log(button, "asas buton");
   return (
     <ContentSection>
       <Fade direction={direction} triggerOnce>

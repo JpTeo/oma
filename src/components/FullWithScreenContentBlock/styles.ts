@@ -1,7 +1,4 @@
 import styled from "styled-components";
-interface HeroSectionProps {
-  backgroundImage: string;
-}
 
 export const NavContainer = styled.div`
   display: flex;
@@ -25,11 +22,11 @@ export const LogoText = styled.span`
 export const LogoTextLight = styled.span`
   font-weight: normal;
 `;
-export const HeroSection = styled.section<HeroSectionProps>`
+export const HeroSection = styled.section<{ $backgroundImage?: string }>`
   position: relative;
   width: 100%; /* antes tenías 95%, ahora 100% */
   height: 80vh; /* más común usar 100vh para un hero */
-  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
+   background-image: url(${props => props.$backgroundImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

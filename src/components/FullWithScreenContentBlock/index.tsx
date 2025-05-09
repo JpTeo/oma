@@ -20,10 +20,9 @@ const FullWidthContentBlock = ({
   button,
   id,
 }: ContentBlockProps) => {
-
   return (
     <>
-      <HeroSection backgroundImage={`/img/svg/${icon}`}>
+      <HeroSection $backgroundImage={`/img/svg/${icon}`}>
         <HeroContent>
           <Row style={{ height: "100%" }}>
             <Col
@@ -43,7 +42,9 @@ const FullWidthContentBlock = ({
                   </MainHeading>
                   <ButtonContainer>
                     {button?.map(({ title }) => (
-                      <Button onClick={redirectWhatsApp}>{title}</Button>
+                      <Button onClick={redirectWhatsApp} key={title}>
+                        {title}
+                      </Button>
                     ))}
                   </ButtonContainer>
                 </StyledContent>
