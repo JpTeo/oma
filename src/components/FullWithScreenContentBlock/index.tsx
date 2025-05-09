@@ -20,9 +20,10 @@ const FullWidthContentBlock = ({
   button,
   id,
 }: ContentBlockProps) => {
+  console.log(icon, "asas icon");
   return (
     <>
-      <HeroSection $backgroundImage={`/img/svg/${icon}`}>
+      <HeroSection $backgroundImage={`/img/jpg/${icon}`}>
         <HeroContent>
           <Row style={{ height: "100%" }}>
             <Col

@@ -31,7 +31,7 @@ const Home = () => {
           title={IntroContent.title}
           content={IntroContent.text}
           button={IntroContent.button}
-          icon="omaheader2.png"
+          icon="header.jpeg"
           id="intro"
         />
       </div>
