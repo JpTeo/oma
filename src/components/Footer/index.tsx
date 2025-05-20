@@ -5,6 +5,7 @@ import {
   Extra,
   FooterContainer,
   LogoContainer,
+  StyledTitle,
   SubTitle,
 } from "./styles";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -69,26 +70,18 @@ const FooterWithMap = ({ address }: ComponentMap) => {
           >
             <LogoContainer>
               <SvgIcon
-                src="logooma7.png"
+                src="logofinal.png"
                 aria-label="homepage"
                 width="200px"
                 height="200px"
               />
             </LogoContainer>
-            <Typography
-              style={{
-                fontFamily: 'font-family: "RedHatDisplay", sans-serif',
-                fontSize: "1.5rem",
-                fontWeight: "bold",
-                color: "white",
-                textAlign: "center",
-              }}
-            >
+            <StyledTitle>
               <EnvironmentOutlined />
               {address}
               <br></br>
               Timbre F
-            </Typography>
+            </StyledTitle>
             <SubTitle>Seguinos en nuestras redes !</SubTitle>
             <FooterContainer>
               {socialList.map((item, idx) => (
@@ -112,12 +105,12 @@ const FooterWithMap = ({ address }: ComponentMap) => {
               justifyContent: "center",
             }}
           >
-            <ContainerMapa style={{ width: "100%", height: "400px" }}>
+            <ContainerMapa>
               <GoogleMap
                 address={address}
-                zoom={18}
                 height="100%"
                 width="100%"
+                zoom={18}
               />
             </ContainerMapa>
           </Col>

@@ -67,7 +67,7 @@ const Home = () => {
           title={ProductContent.title}
           content={ProductContent.text}
           button={IntroContent.button}
-          icon="logooma7.png"
+          icon="logofinal.png"
           id="product"
         />
         <FooterWithMap

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Typography } from "antd";
 
 export const Title = styled("h4")`
   font-size: 22px;
@@ -12,7 +13,6 @@ export const Title = styled("h4")`
 `;
 export const SubTitle = styled("h4")`
   font-family: "RedHatDisplay", sans-serif;
-
   font-size: 1.5rem;
   font-weight: 600;
   color: white;
@@ -21,6 +21,7 @@ export const SubTitle = styled("h4")`
   @media (max-width: 768px) {
     text-align: center;
     margin: 10% 0;
+    font-size: 1.2rem;
   }
 `;
 export const NavLink = styled(Link)`
@@ -104,6 +105,17 @@ export const Large = styled(Link)`
   }
 `;
 
+export const StyledTitle = styled(Typography)`
+  font-family: "RedHatDisplay", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white !important;
+  text-align: center;
+
+  @media (max-width: 576px) {
+    font-size: 1rem;
+  }
+`;
 export const Chat = styled("p")`
   color: #18216d;
   max-width: fit-content;

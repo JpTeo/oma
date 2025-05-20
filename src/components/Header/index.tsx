@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
-import { Button } from "../../common/Button";
 import {
   HeaderSection,
   LogoContainer,
@@ -52,7 +51,7 @@ const Header = () => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logooma7.png" width="70px" height="70px" />
+            <SvgIcon src="logofinal.png" width="70px" height="70px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />
