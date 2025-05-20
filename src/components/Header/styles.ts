@@ -66,7 +66,7 @@ export const CustomNavLinkSmall = styled(NavLink)`
   font-weight: bold;
   transition: color 0.2s ease-in;
   margin: 0.5rem 2rem;
-
+  
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
   }
@@ -92,8 +92,8 @@ export const Span = styled("span")`
   &:hover,
   &:active,
   &:focus {
-    color: rgb(255, 130, 92);
+    color: #F7F2C1;
     text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
+    text-decoration: #F7F2C1 wavy underline;
   }
 `;

@@ -1,11 +1,10 @@
-
 export const redirectWhatsApp = () => {
   const whatsappLink = `https://wa.me/message/UD7CSTBCN4TWH1`;
   window.open(whatsappLink, "_blank");
 };
 
 export const redirectFacebook = () => {
-  const facebookLink = "https://www.facebook.com/?locale=es_LA";
+  const facebookLink = "https://www.facebook.com/omapilatesyoga";
   window.open(facebookLink, "_blank");
 };
 
