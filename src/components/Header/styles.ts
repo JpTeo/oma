@@ -39,12 +39,12 @@ export const CustomNavLink = styled("div")`
 export const Burger = styled("div")`
   @media only screen and (max-width: 890px) {
     display: block;
+    color: red;
   }
-
   display: none;
 
   svg {
-    fill: rgb(247, 242, 193);
+    fill: #FCFBEA;
   }
 `;
 
