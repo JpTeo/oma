@@ -43,7 +43,10 @@ const Home = () => {
         <br></br>
         <br></br>
 
-        <h6 style={{ textAlign: "center", margin: "5% 0%  10% 0" }}>
+        <h6
+          style={{ textAlign: "center", margin: "5% 0%  10% 0" }}
+          id={"mission"}
+        >
           Nuestras clases
         </h6>
         <ContentBlock
@@ -60,7 +63,7 @@ const Home = () => {
           content={MissionContent.text}
           button={IntroContent.button}
           icon="yogaoma.png"
-          id="mission"
+          id=""
         />
         <ContentBlock
           direction="left"
